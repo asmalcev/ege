@@ -16,7 +16,13 @@
 	align-items: center;
 	width: 100%;
 	height: 100vh;
-	background-color: #eee;
+	background: -moz-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(58,70,242,1)), color-stop(100%, rgba(187,98,217,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%); /* ie10+ */
+	background: linear-gradient(128deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3A46F2', endColorstr='#BB62D9',GradientType=1 ); /* ie6-9 */
 }
 .word-block {
 	padding: 20px;
@@ -61,4 +67,11 @@ button {
 }
 button:hover {
 	box-shadow: 1px 1px 15px rgba(0,0,0,0.7);
+}
+.version {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	color: #fff;
+	font-size: 12px;
 }
