@@ -17,7 +17,31 @@
 			</div>
 		</div>
 	</div>
-	<div class="version">v(1.0.3)</div>
+	<div class="modal-menu">
+		<div class="btn" onclick="openM()"><span></span><span></span><span></span></div>
+		<div class="btn" onclick="closeM()"><span></span><span></span><span></span></div>
+		<div class="grid-system">
+			<div class="minidiv">
+				<h3 onclick="openD()">Словарь</h3>
+				<h3 onclick="openD('search')">Поиск слова</h3>
+				<h3 onclick="openD('theory')">Полезные ссылки</h3>
+			</div>
+			<div class="modal modal-dict">
+				<div class="length-block"></div>
+			</div>
+			<div class="modal modal-theory">
+				<a href="http://accentonline.ru/download/slovnik-orfoepicheskiy-2018.pdf" target="_blank">Орфоэпический словник + теория</a>
+			</div>
+			<div class="modal modal-search">
+				<form>
+					<input type="text" placeholder="Искать..." onkeyup="showResults(this.value)">
+					<input type="reset" value="Очистить" class="clear-input" onclick="sr.innerHTML = ''">
+				</form>
+				<div class="search-results"></div>
+			</div>
+		</div>
+	</div>
+	<div class="version">v(1.1.1)</div>
 	<script src="script.js"></script>
 </body>
 </html>
