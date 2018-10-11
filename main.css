@@ -236,19 +236,18 @@ input[type=text]:focus {
 	line-height: 23px;
 }
 .clear-input {
-	background-color: #fff;
+	background-color: rgba(0,0,0,0.1);
   position: absolute;
-  right: 28px;
-  top: 33px;
-  border-radius: 12px;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
   border: none;
   outline: none;
-  padding: 3px 5px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.4);
+  line-height: 45px;
+  padding: 0 10px;
 }
 .clear-input::before, .clear-input::after {
 	content: '';
@@ -259,7 +258,7 @@ input[type=text]:focus {
 	border-radius: 1px;
 }
 .clear-input:hover {
-	box-shadow: 0 0 12px rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.15);
 }
 @media (max-width: 1000px) {
 	.grid-system {
@@ -272,6 +271,6 @@ input[type=text]:focus {
 		margin: 4px;
 	}
 	.modal {
-		height: 64vh;
+		height: 65vh;
 	}
 }
