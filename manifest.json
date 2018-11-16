@@ -1,0 +1,25 @@
+{
+  "short_name": "EGE",
+  "name": "EGE Training",
+  "icons": [
+    {
+      "src": "images/128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/ege/?source=pwa",
+  "background_color": "#8814CA",
+  "display": "standalone",
+  "theme_color": "#8814CA"
+}
