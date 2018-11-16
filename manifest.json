@@ -1,6 +1,7 @@
 {
   "short_name": "EGE",
   "name": "EGE Training",
+  "description": "The Web-application that will help you to prepare for fourth task in Russian exam!",
   "icons": [
     {
       "src": "images/128.png",
@@ -20,6 +21,6 @@
   ],
   "start_url": "/ege/?source=pwa",
   "background_color": "#8814CA",
-  "display": "standalone",
+  "display": "fullscreen",
   "theme_color": "#8814CA"
 }
