@@ -43,6 +43,7 @@ let q = document.querySelector('.quest')
 let a = document.querySelector('.answer-block')
 let md = document.querySelector('.modal-dict')
 let sr = document.querySelector('.search-results')
+let modalBlocks = document.querySelectorAll('.modal')
 let number
 
 function check(is = false) {
@@ -132,19 +133,28 @@ function openD(p) {
 
 	switch(p) {
 		case 'theory':
-			document.querySelector('.modal-theory').style['display'] = 'block'
-			document.querySelector('.modal-dict').style['display'] = 'none'
-			document.querySelector('.modal-search').style['display'] = 'none'
+			modalBlocks.forEach( modal => {
+				modal.style['display'] = 'none'
+			})
+			modalBlocks[1].style['display'] = 'block'
 			break;
 		case 'search':
-			document.querySelector('.modal-theory').style['display'] = 'none'
-			document.querySelector('.modal-dict').style['display'] = 'none'
-			document.querySelector('.modal-search').style['display'] = 'block'
+			modalBlocks.forEach( modal => {
+				modal.style['display'] = 'none'
+			})
+			modalBlocks[2].style['display'] = 'block'
+			break;
+		case 'author':
+			modalBlocks.forEach( modal => {
+				modal.style['display'] = 'none'
+			})
+			modalBlocks[3].style['display'] = 'block'
 			break;
 		default :
-			document.querySelector('.modal-theory').style['display'] = 'none'
-			document.querySelector('.modal-dict').style['display'] = 'block'
-			document.querySelector('.modal-search').style['display'] = 'none'
+			modalBlocks.forEach( modal => {
+				modal.style['display'] = 'none'
+			})
+			modalBlocks[0].style['display'] = 'block'
 			break;
 	}
 

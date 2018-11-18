@@ -260,6 +260,9 @@ input[type=text]:focus {
 .clear-input:hover {
 	background-color: rgba(0,0,0,0.15);
 }
+.author-link span {
+	font-weight: bold;
+}
 @media (max-width: 1000px) {
 	.grid-system {
 		grid-template-columns: 1fr;
