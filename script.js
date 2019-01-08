@@ -1,4 +1,4 @@
-let words = ['кровоточИла','двИжимый','равнЫ','алкогОль','инженЕров','арбуз','вОвремя','давнИшний',
+let words = ['кровоточИла','двИжимый','равнЫ','алкогОль','инженЕров','арбУз','вОвремя','давнИшний',
 'докраснА','зАнятый','зимОвщик','импЕрский','исключИт','начАв','убрАть','обострИть','опОшлят','процЕнт',
 'срЕдствами','щАвель','баловАть','вЕрба','включЕн','включИм','влилАсь','балОванный',' балОванный',' балУясь',
 ' включЕн',' включЕнный',' включЕнный',' довезЕнный',' зАгнутый',' зАнятый',' зАпертый',' зАтемно',' закУпорив',
@@ -83,9 +83,9 @@ function convert(s) {
 
 	for (let i = 0; i < s.length; i++) {
 
-		if (smallVowels.indexOf(s[i]) != -1) 
+		if (smallVowels.indexOf(s[i]) != -1)
 			st +=`<span class="vowel" onclick="check()">${s[i]}</span>`
-		else if (bigVowels.indexOf(s[i]) != -1) 
+		else if (bigVowels.indexOf(s[i]) != -1)
 			st += `<span class="vowel" onclick="check(true)">${s[i].toLowerCase()}</span>`
 		else if (s[i] == '('){
 			st += s.slice(i, s.length)
@@ -98,8 +98,6 @@ function convert(s) {
 
 }
 
-
-
 function openM() {
 	document.querySelector('.modal-menu').style['transform'] = 'translateY(0)'
 }
@@ -110,15 +108,15 @@ function closeM() {
 
 function checkDictionaryLength() {
 
-	
+
 	document.querySelector('.length-block').innerHTML = 'Слов в словаре: ' + words.length
 
-	for (number = 1072; number < 1104;number++) {
-		if (words.some(checkword)) 
+	for (number = 1072; number < 1104; number++) {
+		if (words.some(checkword))
 			md.innerHTML += `<p class="big-letter">${String.fromCharCode(number).toUpperCase()}${String.fromCharCode(number)}</p>`
 		for (let j = 0; j < words.length; j++) {
 			let g = words[j].toLowerCase()
-			if (g.charCodeAt(0) == number) 
+			if (g.charCodeAt(0) == number)
 				md.innerHTML += `<p class="words">${words[j]}</p>`
 		}
 	}
@@ -166,7 +164,7 @@ checkDictionaryLength()
 
 function showResults(str) {
 
-	if (str == '') 
+	if (str == '')
 		sr.innerHTML = 'Совпадений не найдено...'
 	else {
 		let log = true
@@ -180,7 +178,7 @@ function showResults(str) {
 				log = false
 			}
 		})
-		if (log) 
+		if (log)
 			sr.innerHTML = 'Совпадений не найдено...'
 	}
 

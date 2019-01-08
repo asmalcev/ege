@@ -180,9 +180,22 @@ a:hover::after {
 	background-color: #fff;
 	height: calc(100vh - 160px);
 	padding: 20px;
+	padding-bottom: 80px;
 	overflow-y: scroll;
 	display: none;
 	position: relative;
+}
+.modal::-webkit-scrollbar {
+  width: 16px;
+}
+.modal::-webkit-scrollbar-track {
+  background: #c9c9c9;
+}
+.modal::-webkit-scrollbar-thumb {
+  background: #585858;
+}
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #212121;
 }
 .grid-system {
 	display: grid;
@@ -205,7 +218,7 @@ a:hover::after {
 	bottom: 0;
 }
 .words {
-	margin: 3px 30px;
+	margin: 6px 32px;
 	font-size: 18px;
 }
 .length-block {
