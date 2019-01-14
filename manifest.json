@@ -45,7 +45,7 @@
     }
   ],
   "start_url": "/ege/?source=pwa",
-  "background_color": "#67099C",
+  "background_color": "#fff461",
   "display": "standalone",
-  "theme_color": "#67099C"
+  "theme_color": "#fff461"
 }

@@ -41,17 +41,12 @@ a:hover::after {
 	align-items: center;
 	width: 100%;
 	min-height: 100vh;
-	background: -moz-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(58,70,242,1)), color-stop(100%, rgba(187,98,217,1)));
-	background: -webkit-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%);
-	background: -o-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%);
-	background: -ms-linear-gradient(322deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%);
-	background: linear-gradient(128deg, rgba(58,70,242,1) 0%, rgba(187,98,217,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3A46F2', endColorstr='#BB62D9',GradientType=1 );
+	background: linear-gradient(110.16459274854196deg, #ffffff 6.0143288084464555%,#f6f6f6 95.75791855203619%);
 }
 .word-block {
-	padding: 20px;
-	background-color: #fff;
+	padding: 30px 50px;
+	border: 5px #fff461 solid;
+	max-width: 100%;
 }
 .quest {
 	letter-spacing: 3px;
@@ -76,29 +71,53 @@ a:hover::after {
 	text-align: center;
 	display: none;
 }
-.next {
-	background: #244AD7;
-	padding: 5px 10px;
-	color: #fff;
-	font-size: 18px;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	outline: none;
-	-webkit-transition: .3s;
-	-o-transition: .3s;
-	transition: .3s;
-	text-transform: uppercase;
-	margin: 14px 20px 0px 20px;
+.button-wrapper {
+	position: relative;
+	margin-top: 16px;
 }
-.next:hover {
-	box-shadow: 1px 1px 15px rgba(0,0,0,0.7);
+.next {
+	position: relative;
+	padding: 7px 20px;
+	border: 1px #333 solid;
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 16px;
+	transition: .3s ease;
+	overflow: hidden;
+}
+.next:before {
+	content: 'Следующее';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	color: #fff;
+	opacity: 0;
+	transition: .3s ease;
+}
+.next:after {
+  content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #333;
+	top: 0;
+	left: 0;
+	transform: scaleX(0);
+	transition: .3s ease;
+}
+.next:hover:after {
+	transform: scaleX(1);
+}
+.next:hover:before {
+	opacity: 1;
 }
 .version {
 	position: fixed;
 	right: 30px;
 	bottom: 30px;
-	color: #fff;
+	color: #333;
 	font-size: 14px;
 }
 .modal-menu {
@@ -275,6 +294,14 @@ input[type=text]:focus {
 }
 .author-link span {
 	font-weight: bold;
+}
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 62px;
+	bottom: 0;
+	left: 0;
+	background-color: #ececec;
 }
 @media (max-width: 1000px) {
 	.grid-system {
